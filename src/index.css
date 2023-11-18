@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* Shadows */
+ 
+.shadow-basic {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Fonts */
+
+.inter-400 {
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+.inter-500 {
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.inter-600 {
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.inter-700 {
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+.inter-800 {
+  font-family: "Inter";
+  font-weight: 800;
+}
+
+@layer components {
+  .dashboard-container {
+    @apply shadow-basic rounded-lg bg-neutral-900 inter-500 text-white p-4 md:w-[40rem] mb-10;
+  }
+
+  .btn-icon {
+    @apply w-4 h-4 mr-2;
+  }
+
+  .nav-btn {
+    @apply shadow-sm hover:shadow-neutral-800 px-3 py-1.5 rounded-lg flex items-center transition-all;
+  }
 }
