@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+  background-color: rgb(38 38 38);
+} */
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -18,6 +22,14 @@
 
 
 /* Fonts */
+
+.dark-bg {
+  background-color: rgb(38 38 38);
+}
+
+.transparent-bg {
+  background-color: transparent;
+}
 
 .inter-400 {
   font-family: "Inter";
@@ -44,6 +56,10 @@
   font-weight: 800;
 }
 
+.blur-b {
+  backdrop-filter: blur(10px);
+}
+
 @layer components {
   .dashboard-container {
     @apply shadow-basic rounded-lg bg-neutral-900 inter-500 text-white p-4 md:w-[40rem] mb-10;
@@ -54,6 +70,6 @@
   }
 
   .nav-btn {
-    @apply shadow-sm hover:shadow-neutral-800 px-3 py-1.5 rounded-lg flex items-center transition-all;
+    @apply shadow-sm w-[100%] mb-2 md:mb-0 md:w-auto hover:shadow-neutral-800 px-3 py-1.5 rounded-lg flex items-center transition-all;
   }
 }

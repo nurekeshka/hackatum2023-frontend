@@ -30,7 +30,7 @@ function Leaderboard({ profile }) {
     return (
         <div className='h-screen bg-neutral-800 overflow-hidden'>
             <div className='h-12 w-[100%]'></div>
-            <div className='dashboard-container w-[65%] mx-auto mt-10'>
+            <div className='dashboard-container w-[90%] md:w-[65%] mx-auto mt-10'>
                 <div className='text-center text-3xl inter-600 pt-5 pb-10'>
                     Leaderboard
                 </div>

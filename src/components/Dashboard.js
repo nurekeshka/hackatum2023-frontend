@@ -43,8 +43,8 @@ function Dashboard({ profile }) {
     return (
         <div className='h-screen bg-neutral-800 overflow-hidden'>
             <div className='h-12 w-[100%]'></div>
-            <div className='mt-20 p-8 lg:flex justify-evenly'>
-                <div className=''>
+            <div className='md:mt-20 p-8 lg:flex justify-evenly'>
+                <div className='md:mx-4'>
                     <LevelOverview {...profile} />
                     <CurrentIssues setCurIssues={setCurIssues} curIssues={curIssues} />
                 </div>

@@ -9,10 +9,10 @@ function Price({ priceImg, title, subtitle, pricePoints }) {
     return (
         <div className='w-auto object-cover p-1 shadow-basic border border-neutral-700 rounded-lg'>
             <div className=''>
-                <img className='rounded-lg w-60 h-60' src={priceImg} />
+                <img className='rounded-lg object-cover w-[100%] h-60' src={priceImg} />
             </div>
             <div className=''>
-                <div className='text-center mt-1 mb-3'>
+                <div className='text-center mt-2 mb-3'>
                     <span className='text-xl block'>{title}</span>
                     <span className='text-xs block text-neutral-400'>{subtitle}</span>
                 </div>
