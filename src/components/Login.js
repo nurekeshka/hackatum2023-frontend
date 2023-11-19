@@ -18,10 +18,10 @@ function Login() {
                 </div>
                 <div className='px-[36px] inter-500'>
                     <div className='w-[100%]'>
-                        <input onChange={(e) => setEmail(e.target.value)} placeholder='Email' className='focus:outline-none w-[100%] rounded-lg border p-1' />
+                        <input onChange={(e) => setEmail(e.target.value)} placeholder='Email' className='dark-bg focus:outline-none w-[100%] rounded-lg border border-neutral-700 p-1' />
                     </div>
                     <div className='w-[100%] mt-1'>
-                        <input type='password' onChange={(e) => setPassword(e.target.value)} placeholder='Passwort' className='focus:outline-none w-[100%] rounded-lg border p-1' />
+                        <input type='password' onChange={(e) => setPassword(e.target.value)} placeholder='Passwort' className='dark-bg focus:outline-none w-[100%] rounded-lg border border-neutral-700 p-1' />
                     </div>
                 </div>
                 <div className='px-[36px] pb-[20px] pt-1 lg:pt-2'>

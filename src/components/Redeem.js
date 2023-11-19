@@ -4,8 +4,9 @@ import hatPlaceholder from '../assets/hatPlaceholder.jpg'
 import socksPlaceholder from '../assets/socksPlaceholder.jpg'
 import beanniePlaceholder from '../assets/beanniePlaceholder.jpg'
 import Price from './Price'
-import { ArrowLeftIcon, ArrowRightIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { ArrowLeftIcon, ArrowRightIcon, BanknotesIcon, PlusIcon } from '@heroicons/react/24/outline'
 import pricePlaceholder from '../assets/prizePlaceholder.png'
+import prize from '../assets/prize.png'
 
 function Redeem() {
 
@@ -16,19 +17,19 @@ function Redeem() {
             title: "HackaTUM Beannie",
             subtitle: "Comes in Black and Blue",
             priceImg: beanniePlaceholder,
-            pricePoints: "100 P"
+            pricePoints: 55
         },
         {
             title: "HackaTUM Socks",
             subtitle: "Comes in Black and Blue",
             priceImg: socksPlaceholder,
-            pricePoints: "100 P"
+            pricePoints: 35
         },
         {
             title: "HackaTUM Hat",
             subtitle: "Comes in Black and Blue",
             priceImg: hatPlaceholder,
-            pricePoints: "100 P"
+            pricePoints: 50
         }
     ])
 
@@ -39,16 +40,18 @@ function Redeem() {
 
     return (
 
-        <div className='md:h-screen bg-neutral-800 md:overflow-hidden relative'>
+        <div className='md:h-screen bg-neutral-800 md:overflow-hidden relative py-10'>
             {showPriceForm &&
-                <div className='bg-neutral-800 rounded-lg text-neutral-100 inter-500 shadow-sm shadow-neutral-800 p-8 absolute top-0 bottom-0 right-0 left-0 m-auto h-max w-[70%] max-w-[42rem] z-[100]'>
-                    <div className='text-2xl text-center inter-600 text-3xl'>
+                <div className='bg-neutral-800 rounded-lg text-neutral-100 inter-500 shadow-sm shadow-neutral-800 p-8 absolute top-0 bottom-0 right-0 left-0 m-auto h-max w-[70%] max-w-[45rem] z-[100]'>
+                    <div className=' text-center inter-600 text-3xl'>
                         Add New Prize
                     </div>
-                    <div className='flex pt-8'>
-                        <div className='rounded-lg border border-neutral-700 w-max mr-6 shrink-0 bg-neutral-100'>
+                    <div className='flex pt-9'>
+                        <div className='rounded-lg border border-neutral-700 w-max mr-6 shrink-0 bg-neutral-100 overflow-hidden'>
                             <label htmlFor='prizeImg' className='cursor-pointer'>
-                                <img className='w-56 h-56' src={prizeImage} />
+                                <div className='bg-white p-6'>
+                                    <img className='w-48 h-48' src={prize} />
+                                </div>
                             </label>
                             <input id='prizeImg' type='file' className='hidden' />  
                         </div>
@@ -78,9 +81,13 @@ function Redeem() {
 
 
             <div className='h-12 w-[100%]'></div>
-            <div className='dashboard-container pb-10 w-[90%] lg:w-[60rem] mx-auto mt-10'>
-                <div className='text-center text-3xl inter-600 mt-1 mb-6'>
+            <div className='dashboard-container pb-10 w-[90%] lg:w-[60rem] mx-auto'>
+                <div className='text-center text-3xl inter-600 mt-1 mb-6 relative'>
                     Get Prizes
+                    <div className='top-0 right-0 text-base ld:text-xl absolute py-0.5  lg:py-1.5 px-2 lg:px-4 bg-green-500 rounded-lg flex items-center justify-between'>
+                        100 
+                        <BanknotesIcon className='w-5 h-5 inline ml-1.5' />
+                    </div>
                 </div>
 
                 <div>

@@ -45,21 +45,26 @@ function App() {
   ])
 
   useEffect(() => {
-    const url = 'https://davidfranke.youtrack.cloud/api/issues?fields=id,summary,project(name)';
-    const headers = {
-      'Accept': 'application/json',
-      'Authorization': 'Bearer perm:cm9vdA==.NDgtMA==.TKJ7CvgnSsSAxxl0FB2eTHtlgaclrG',
-      'Cache-Control': 'no-cache',
-      'Access-Control-Allow-Origin': true,
-    };
+    const url = "https://davidfranke.youtrack.cloud/api/rest/oauth2/auth"
 
-    axios.get(url, { headers })
-      .then(response => {
-        console.log(response.data); // Handle the response data here
-    })
-      .catch(error => {
-        console.error('Error making request:', error);
-    });
+
+    // Request fields
+
+    // const url = 'https://davidfranke.youtrack.cloud/api/issues?fields=id,summary,project(name)';
+    // const headers = {
+    //   'Accept': 'application/json',
+    //   'Authorization': 'Bearer perm:cm9vdA==.NDgtMA==.TKJ7CvgnSsSAxxl0FB2eTHtlgaclrG',
+    //   'Cache-Control': 'no-cache',
+    //   'Access-Control-Allow-Origin': true,
+    // };
+
+    // axios.get(url, { headers })
+    //   .then(response => {
+    //     console.log(response.data); // Handle the response data here
+    // })
+    //   .catch(error => {
+    //     console.error('Error making request:', error);
+    // });
   }, [])
 
 

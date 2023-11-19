@@ -1,4 +1,4 @@
-import { CheckIcon } from '@heroicons/react/24/outline'
+import { CheckIcon, InboxArrowDownIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 
 function Issue({ setCurIssues, setIssues, id, points, title, description}) { 
@@ -21,7 +21,7 @@ function Issue({ setCurIssues, setIssues, id, points, title, description}) {
             </div>
 
             <button onClick={claimIssue} className='w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center hover:scale-105 ml-4'>
-                <CheckIcon className='w-6 h-6' />
+                <InboxArrowDownIcon className='w-6 h-6' />
             </button>
         </div> 
     )

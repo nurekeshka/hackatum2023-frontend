@@ -1,11 +1,25 @@
 import React from 'react'
+import goldenTrophy from './../assets/golden-globe.png'
 
 function Leader({index, id, name, pointScore}) {
+
+    function getState() {
+        if (index === 1) {
+            return <img className='w-14 h-14' src={goldenTrophy} />
+        } else if (index === 2) {
+            return "silber-bg"
+        } else {
+            return (
+                <div className={'w-12 h-12 flex justify-center items-center '}>
+                    {index + '.'}
+                </div>
+            )
+        }
+    }
+
     return (
-        <div className='mb-2 border rounded-lg border-neutral-700 overflow-hidden flex justify-between'>
-            <div className='w-12 h-12 bg-neutral-700 flex justify-center items-center'>
-                {index + '.'}
-            </div>
+        <div className={'py-1.5 overflow-hidden flex justify-between border-b border-neutral-700'}>
+            {getState()}
             <div className='text-lg flex items-center'>
                 {name}
             </div>

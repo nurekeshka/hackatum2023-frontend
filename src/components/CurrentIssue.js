@@ -1,4 +1,4 @@
-import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline'
+import { CheckIcon, ClockIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 
 function CurrentIssue({setCurIssues, id, points, title, description, status}) {
@@ -26,7 +26,7 @@ function CurrentIssue({setCurIssues, id, points, title, description, status}) {
             
             {status === 'in progress' &&
                 <button onClick={finishIssue} className='w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center hover:scale-105  ml-4'>
-                    <CheckIcon className='w-6 h-6' />
+                    <EllipsisHorizontalIcon className='w-6 h-6' />
                 </button>
             }
             {status === 'pending' &&

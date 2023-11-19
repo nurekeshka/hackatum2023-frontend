@@ -1,16 +1,22 @@
 import { BanknotesIcon, Bars3Icon, ChartBarIcon, ChevronRightIcon, Squares2X2Icon, UserCircleIcon } from '@heroicons/react/24/outline'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import strawberry from './../assets/strawberry.png'
 
 function Navbar() {
 
     const navigate = useNavigate()
     const [showSidebar, setShowSidebar] = useState(false)
+    const [selectedMenu, setSelectedMenu] = useState("")
 
     return (
         <div className='w-[100%] bg-neutral-900 h-12 fixed text-neutral-100 shadow-lg flex justify-between z-20'>
             <div onClick={() => navigate("/")} className='flex items-center h-[100%] px-2.5 cursor-pointer'>
-                <span className='inter-700 text-xl'>PlayDev.</span>
+                <img className='inline object-cover w-8 h-8 ml-1 mr-3' src={strawberry} />
+                <span className='inter-700 text-xl'>
+                    <span className='text-neutral-100'>Straw</span>
+                    <span className='text-red-400'>Berry</span>
+                </span>
             </div>
             <div onClick={() => setShowSidebar(true)} className='md:hidden p-2'>
                 <Bars3Icon className='w-8 h-8' />
@@ -24,15 +30,15 @@ function Navbar() {
                 <div className='md:hidden h-12'>
 
                 </div>
-                <button onClick={() => navigate("/leaderboard")} className='nav-btn mr-4'>
+                <button onClick={() => {navigate("/leaderboard"); setSelectedMenu("leaderboard")}} className={'nav-btn mr-4 ' + (selectedMenu === "leaderboard" && "text-red-400")}>
                     <ChartBarIcon className='btn-icon' />
                     Leaderboard
                 </button>
-                <button onClick={() => navigate("/redeem")} className='nav-btn mr-4'>
+                <button onClick={() => {navigate("/redeem"); setSelectedMenu("redeem")}} className={'nav-btn mr-4 ' + (selectedMenu === "redeem" && "text-red-400")}>
                     <BanknotesIcon className='btn-icon' />
                     Redeem
                 </button>
-                <button onClick={() => navigate("/profile")} className='nav-btn'>
+                <button onClick={() => {navigate("/profile"); setSelectedMenu("profile")}} className={'nav-btn ' + (selectedMenu === "profile" && "text-red-400")}>
                     <UserCircleIcon className='btn-icon' />
                     Profile
                 </button>   
